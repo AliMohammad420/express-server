@@ -10,6 +10,7 @@ describe('API server', () => {
     expect(res.status).toEqual(200);
     expect(res.text).toEqual('Hello World')
   });
+
   it( 'Person', async () => {
     const res = await request.post( '/person' ).query( {
         name: 'ali', 
@@ -18,5 +19,5 @@ describe('API server', () => {
     } );
     expect( res.status ).toEqual( 200 );
     expect( res.text ).toEqual( '22' );
-} );
+});
 })
