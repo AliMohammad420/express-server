@@ -16,7 +16,7 @@ app.post( '/person', ( req, res ) => {
 } );
 
 function start(port) {
-  app.listen(3000, () => console.log(`Server is up!`));
+  app.listen(process.env.PORT || 3001, () => console.log(`Server is up!`));
 }
 
 module.exports = {
